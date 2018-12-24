@@ -1,15 +1,18 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+# coding:utf-8
 """
 bot config
 """
-import logging
 import os
+import logging
 
-TOKEN = os.environ.get('token') or ''
+DEBUG = bool(os.environ.get('debug', True))
 
-LOG_LEVEL = os.environ.get('log_level') or logging.INFO
+LOG_LEVEL = os.environ.get("log_level") or logging.INFO
 
-WEBHOOK_URL = os.environ.get('WEBHOOK_URL') or ""
+WEBHOOK_URL = os.environ.get('webhook_url')
 
-WEBHOOK_PORT = int(os.environ.get('PORT', '8443'))
+WEBHOOK_PORT = os.environ.get('webhook_port')
+
+SENTRY_URL = os.environ.get('sentry')
+
+TOKEN = os.environ.get('token')
