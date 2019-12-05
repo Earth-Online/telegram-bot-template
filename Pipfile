@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-python-telegram-bot = "==12.1.1"
+python-telegram-bot = "==12.2.0"
 sentry-sdk = "==0.13.4"
 
 [dev-packages]
